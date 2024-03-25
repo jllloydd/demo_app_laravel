@@ -7,13 +7,29 @@
     <title>Students</title>
 </head>
 <body>
-    <h1>List of Student</h1>
-    <ul>
+    <h1>List of Students</h1>
+    <table style="border: 2px solid;">
+        
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+
         @foreach ($students as $student)
 
-        <li>{{ $student }}</li>
+            <tbody>
+                <tr>
+                    <td>{{$student->first_name}}</td>
+                    <td>{{$student->last_name}}</td>
+                    <td>{{$student->email}}</td>
+                </tr>
+            </tbody>
 
         @endforeach
-    </ul>
+        
+    </table>
+        @dd($students)
+        
 </body>
 </html>
